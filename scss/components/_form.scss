@@ -15,6 +15,13 @@
     width: 100%;
   }
 
+  label {
+    display: flex;
+    gap: var(--spacing-100);
+    align-items: center;
+    margin-block-end: var(--spacing-100);
+  }
+
   input,
   textarea {
     border: var(--stroke-solid);
@@ -24,6 +31,43 @@
     padding-block-end: var(--spacing-150);
     padding-inline: var(--spacing-300);
     width: 100%;
+  }
+
+  .form__input-wrapper {
+    margin-block-end: var(--spacing-300);
+  }
+
+  .form__radio-group {
+    margin-block-start: var(--spacing-300);
+    margin-block-end: var(--spacing-300);
+
+    p:first-child {
+      display: flex;
+      gap: var(--spacing-100);
+      align-items: center;
+      margin-block-end: var(--spacing-200);
+    }
+  }
+
+  .radio-btn__input {
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+    align-items: center;
+
+    p {
+      display: flex;
+      gap: var(--spacing-100);
+      margin-block-end: 0;
+    }
+  }
+
+  .form__checkbox-group {
+    display: grid;
+    grid-template-columns: 1.5rem auto;
+    gap: var(--spacing-200);
+    margin-block-start: var(--spacing-500);
+    margin-block-end: var(--spacing-500);
   }
 
   @media (min-width: 48rem) {

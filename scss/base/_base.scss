@@ -8,6 +8,7 @@
   --green-200: hsl(148 38% 91%);
   --grey-900: hsl(187 24% 22%);
   --grey-500: hsl(186 15% 59%);
+  --blue: hsl(228 45% 44%);
   --red: hsl(0 66% 54%);
   --white: hsl(0 0% 100%);
 
@@ -52,7 +53,6 @@ h1 {
   font: var(--text-heading);
   letter-spacing: -1px;
   line-height: var(--leading-none);
-  margin-block-end: var(--spacing-400);
 }
 
 h2 {
@@ -72,7 +72,7 @@ a {
 }
 
 a:hover {
-  color: var(--purple-500);
+  color: var(--blue);
   text-decoration: none;
 }
 
