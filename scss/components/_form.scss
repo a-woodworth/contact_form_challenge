@@ -1,0 +1,40 @@
+// ___________________________________________________________________
+// Form Styles
+// ___________________________________________________________________
+
+.contact-form {
+  background-color: var(--white);
+  border-radius: var(--radius-l);
+  padding-inline: var(--spacing-300);
+  padding-block: var(--spacing-300);
+  margin-inline: auto;
+  max-width: 21.4375rem;
+
+  legend {
+    margin-block-end: var(--spacing-400);
+    width: 100%;
+  }
+
+  input,
+  textarea {
+    border: var(--stroke-solid);
+    border-radius: var(--radius-s);
+    font: var(--text-md);
+    padding-block-start: var(--spacing-150);
+    padding-block-end: var(--spacing-150);
+    padding-inline: var(--spacing-300);
+    width: 100%;
+  }
+
+  @media (min-width: 48rem) {
+    padding-block: var(--spacing-500);
+    padding-inline: var(--spacing-500);
+    max-width: 43.125rem;
+  }
+
+  @media (min-width: 75rem) {
+    padding-block: var(--spacing-500);
+    padding-inline: var(--spacing-500);
+    max-width: 46rem;
+  }
+}

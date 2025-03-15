@@ -1,0 +1,35 @@
+// ___________________________________________________________________
+// Toast Styles
+// ___________________________________________________________________
+
+.toast-success {
+  background-color: var(--grey-900);
+  border-radius: var(--radius-m);
+  color: var(--white);
+  max-width: 20.4375rem;
+  padding-inline: var(--spacing-300);
+  padding-block: var(--spacing-300);
+  position: absolute;
+  top: 4.75rem;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+
+  @media (min-width: 48rem) {
+    max-width: 28.125rem;
+    top: 5rem;
+  }
+}
+
+.toast__heading {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--spacing-100);
+  margin-block-end: var(--spacing-100);
+
+  img {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}

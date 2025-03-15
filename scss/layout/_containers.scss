@@ -1,0 +1,23 @@
+// ___________________________________________________________________
+// Container Styles
+// ___________________________________________________________________
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-inline: var(--spacing-200);
+}
+
+.form-wrapper {
+  padding-block-start: var(--spacing-400);
+  padding-inline: var(--spacing-200);
+  position: relative;
+  width: 100vw;
+
+  @media (min-width: 48rem) {
+    padding-block-start: var(--spacing-1600);
+    padding-inline: var(--spacing-500);
+  }
+}
