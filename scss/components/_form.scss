@@ -26,6 +26,7 @@
   textarea {
     border: var(--stroke-solid);
     border-radius: var(--radius-s);
+    cursor: pointer;
     font: var(--text-md);
     padding-block-start: var(--spacing-150);
     padding-block-end: var(--spacing-150);
@@ -63,11 +64,69 @@
   }
 
   .form__checkbox-group {
-    display: grid;
-    grid-template-columns: 1.5rem auto;
-    gap: var(--spacing-200);
+    color: var(--green-600);
     margin-block-start: var(--spacing-500);
     margin-block-end: var(--spacing-500);
+    position: relative;
+  }
+
+  input[type='checkbox'] {
+    appearance: none;
+    background-color: var(--white);
+    border: 2px solid var(--grey-500);
+    border-radius: 0.15em;
+    width: 1.125rem;
+    height: 1.125rem;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+  }
+
+  input[type='checkbox']:checked {
+    background-color: var(--white);
+    border-color: var(--green-600);
+    transition: all 0.1s linear;
+  }
+
+  .custom-checkbox svg {
+    color: transparent;
+    cursor: pointer;
+    position: absolute;
+    left: -0.1875rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: all 0.1s linear;
+  }
+
+  .checkbox__label {
+    color: var(--grey-900);
+    display: grid;
+    margin-inline-start: calc(24px + var(--spacing-200));
+    margin-block-end: 0;
+  }
+
+  .custom-checkbox:has(input[type='checkbox']:checked) {
+    svg {
+      color: var(--green-600);
+    }
+  }
+
+  button {
+    background-color: var(--green-600);
+    border: none;
+    border-radius: var(--radius-s);
+    color: var(--white);
+    cursor: pointer;
+    font: var(--text-md-bold);
+    padding-block: var(--spacing-200);
+    padding-inline: var(--spacing-500);
+    width: 100%;
+
+    &:hover {
+      background: var(--gradient);
+      transition: 0.25s ease-in;
+    }
   }
 
   @media (min-width: 48rem) {
@@ -77,8 +136,6 @@
   }
 
   @media (min-width: 75rem) {
-    padding-block: var(--spacing-500);
-    padding-inline: var(--spacing-500);
     max-width: 46rem;
   }
 }

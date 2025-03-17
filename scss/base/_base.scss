@@ -12,12 +12,19 @@
   --red: hsl(0 66% 54%);
   --white: hsl(0 0% 100%);
 
-  // Border, Radius
+  // Border, Gradient, Radius
+  --gradient: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    var(--green-600);
   --radius-s: 0.5rem;
   --radius-m: 0.75rem;
   --radius-l: 1rem;
   --stroke-width: 1px;
   --stroke-solid: var(--stroke-width) solid var(--grey-500);
+  --stroke-bold: inset 4px solid var(--grey-500);
   --stroke-hover: var(--stroke-width) solid var(--green-600);
   --stroke-focus: var(--stroke-width) dotted currentColor;
   --stroke-error: var(--stroke-width) solid var(--red);
@@ -62,6 +69,7 @@ h2 {
 }
 
 p {
+  color: var(--grey-900);
   font: var(--text-sm);
   line-height: var(--leading-standard);
 }

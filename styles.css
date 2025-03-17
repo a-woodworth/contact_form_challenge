@@ -60,11 +60,18 @@ select {
   --blue: hsl(228 45% 44%);
   --red: hsl(0 66% 54%);
   --white: hsl(0 0% 100%);
+  --gradient: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    var(--green-600);
   --radius-s: 0.5rem;
   --radius-m: 0.75rem;
   --radius-l: 1rem;
   --stroke-width: 1px;
   --stroke-solid: var(--stroke-width) solid var(--grey-500);
+  --stroke-bold: inset 4px solid var(--grey-500);
   --stroke-hover: var(--stroke-width) solid var(--green-600);
   --stroke-focus: var(--stroke-width) dotted currentColor;
   --stroke-error: var(--stroke-width) solid var(--red);
@@ -105,6 +112,7 @@ h2 {
 }
 
 p {
+  color: var(--grey-900);
   font: var(--text-sm);
   line-height: var(--leading-standard);
 }
@@ -166,6 +174,7 @@ a:focus {
 .contact-form textarea {
   border: var(--stroke-solid);
   border-radius: var(--radius-s);
+  cursor: pointer;
   font: var(--text-md);
   padding-block-start: var(--spacing-150);
   padding-block-end: var(--spacing-150);
@@ -197,11 +206,60 @@ a:focus {
   margin-block-end: 0;
 }
 .contact-form .form__checkbox-group {
-  display: grid;
-  grid-template-columns: 1.5rem auto;
-  gap: var(--spacing-200);
+  color: var(--green-600);
   margin-block-start: var(--spacing-500);
   margin-block-end: var(--spacing-500);
+  position: relative;
+}
+.contact-form input[type=checkbox] {
+  appearance: none;
+  background-color: var(--white);
+  border: 2px solid var(--grey-500);
+  border-radius: 0.15em;
+  width: 1.125rem;
+  height: 1.125rem;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+}
+.contact-form input[type=checkbox]:checked {
+  background-color: var(--white);
+  border-color: var(--green-600);
+  transition: all 0.1s linear;
+}
+.contact-form .custom-checkbox svg {
+  color: transparent;
+  cursor: pointer;
+  position: absolute;
+  left: -0.1875rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all 0.1s linear;
+}
+.contact-form .checkbox__label {
+  color: var(--grey-900);
+  display: grid;
+  margin-inline-start: calc(24px + var(--spacing-200));
+  margin-block-end: 0;
+}
+.contact-form .custom-checkbox:has(input[type=checkbox]:checked) svg {
+  color: var(--green-600);
+}
+.contact-form button {
+  background-color: var(--green-600);
+  border: none;
+  border-radius: var(--radius-s);
+  color: var(--white);
+  cursor: pointer;
+  font: var(--text-md-bold);
+  padding-block: var(--spacing-200);
+  padding-inline: var(--spacing-500);
+  width: 100%;
+}
+.contact-form button:hover {
+  background: var(--gradient);
+  transition: 0.25s ease-in;
 }
 @media (min-width: 48rem) {
   .contact-form {
@@ -212,8 +270,6 @@ a:focus {
 }
 @media (min-width: 75rem) {
   .contact-form {
-    padding-block: var(--spacing-500);
-    padding-inline: var(--spacing-500);
     max-width: 46rem;
   }
 }
