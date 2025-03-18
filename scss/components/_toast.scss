@@ -10,7 +10,7 @@
   padding-inline: var(--spacing-300);
   padding-block: var(--spacing-300);
   position: absolute;
-  top: 4.75rem;
+  top: 5.5rem;
   left: 50%;
   width: 100%;
   transform: translate(-50%, -50%);
@@ -32,4 +32,8 @@
     height: 1.5rem;
     width: 1.5rem;
   }
+}
+
+.toast__body {
+  color: var(--white);
 }
