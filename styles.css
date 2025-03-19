@@ -29,7 +29,8 @@ h1,
 h2,
 p,
 fieldset,
-legend {
+legend,
+textarea {
   margin: 0;
   padding: 0;
 }
@@ -181,14 +182,13 @@ a:focus {
   border-radius: var(--radius-s);
   cursor: pointer;
   font: var(--text-md);
+  line-height: var(--leading-standard);
   padding-block-start: var(--spacing-150);
   padding-block-end: var(--spacing-150);
   padding-inline: var(--spacing-300);
   width: 100%;
 }
 .contact-form textarea {
-  font: var(--text-md);
-  line-height: var(--leading-standard);
   height: 15rem;
   resize: none;
 }
@@ -206,6 +206,15 @@ a:focus {
 .contact-form .form__input-wrapper textarea:hover {
   border: var(--stroke-hover);
 }
+.contact-form .form__input-wrapper p {
+  margin-block-start: var(--spacing-100);
+}
+.contact-form .form__input:invalid:where([aria-invalid=true]) {
+  border: var(--stroke-error);
+}
+.contact-form .form__error-message {
+  color: var(--red);
+}
 .contact-form .form__name-group {
   display: grid;
   grid-template-columns: 1fr;
@@ -219,9 +228,10 @@ a:focus {
   }
 }
 .contact-form .form__radio-group {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-200);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  row-gap: var(--spacing-200);
 }
 .contact-form .form__radio-group p:first-child {
   display: flex;
@@ -235,9 +245,7 @@ a:focus {
 }
 @media (min-width: 48rem) {
   .contact-form .form__radio-group {
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
     column-gap: var(--spacing-200);
   }
 }
@@ -264,6 +272,7 @@ a:focus {
   column-gap: var(--spacing-150);
   cursor: pointer;
   font: var(--text-md);
+  line-height: var(--leading-standard);
   margin-block-end: 0;
   padding-block: var(--spacing-150);
   padding-inline: var(--spacing-300);
@@ -308,6 +317,9 @@ a:focus {
   margin-block-start: var(--spacing-200);
   margin-block-end: var(--spacing-200);
   position: relative;
+}
+.contact-form .form__checkbox-group p {
+  margin-block-start: var(--spacing-100);
 }
 .contact-form input[type=checkbox] {
   appearance: none;

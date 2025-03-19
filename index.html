@@ -22,13 +22,14 @@
       <div class="form-wrapper">
         <form
           class="contact-form"
+          id="contact"
           action="#"
           method="post"
           novalidate
         >
           <fieldset>
             <legend>
-              <h1>Contact Us</h1>
+              <h1 class="form__heading">Contact Us</h1>
             </legend>
             <div class="form__name-group">
               <div class="form__input-wrapper">
@@ -41,8 +42,9 @@
                   id="firstname"
                   name="firstname"
                   maxlength="50"
-                  value=""
+                  aria-invalid="false"
                   aria-describedby="firstname-error"
+                  value=""
                   required
                 />
                 <p
@@ -62,8 +64,9 @@
                   id="lastname"
                   name="lastname"
                   maxlength="50"
-                  value=""
+                  aria-invalid="false"
                   aria-describedby="lastname-error"
+                  value=""
                   required
                 />
                 <p
@@ -84,6 +87,8 @@
                 id="email"
                 name="email"
                 maxlength="64"
+                aria-invalid="false"
+                aria-describedby="email-error"
                 value=""
                 required
               />
@@ -104,7 +109,7 @@
                   <input
                     type="radio"
                     id="general"
-                    name="query-type"
+                    name="query"
                     value="general"
                   />
                   <span>General Enquiry</span>
@@ -115,7 +120,7 @@
                   <input
                     type="radio"
                     id="support"
-                    name="query-type"
+                    name="query"
                     value="support"
                   />
                   <span>Support Request</span>
@@ -136,6 +141,8 @@
                 class="form__input"
                 id="message"
                 name="message"
+                maxlength="500"
+                aria-invalid="false"
                 aria-describedby="message-error"
                 required
               ></textarea>
@@ -183,7 +190,7 @@
           </fieldset>
         </form>
         <!-- Success message that appears after form submission -->
-        <div class="toast-success hidden">
+        <div class="toast-success hidden" aria-live="polite">
           <div class="toast__heading">
             <img
               aria-hidden="true"
@@ -207,5 +214,6 @@
         <a href="https://github.com/a-woodworth">a-woodworth</a>.
       </p>
     </footer>
+    <script src="app.js"></script>
   </body>
 </html>
