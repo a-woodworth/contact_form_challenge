@@ -8,6 +8,7 @@ This is a solution to the [Contact form challenge on Frontend Mentor](https://ww
   - [The challenge](#the-challenge)
   - [Links](#links)
   - [Built with](#built-with)
+  - [Useful resources](#useful-resources)
 
 ## Overview
 
@@ -35,3 +36,10 @@ Users should be able to:
 - CSS Custom properties (variables)
 - JavaScript
 - [Sass](https://sass-lang.com) - CSS Preprocessor
+- Constraint Validation API
+
+### Useful Resources
+
+- Sara Soueidan: [Inclusively Hiding & Styling Checkboxes and Radio Buttons](https://www.sarasoueidan.com/blog/inclusively-hiding-and-styling-checkboxes-and-radio-buttons)
+- Scott O'Hara: [One Last Time: Custom Styling Radio Buttons and Checkboxes](https://www.scottohara.me/blog/2021/09/24/custom-radio-checkbox-again.html)
+- Stephanie Eckles: [Pure CSS Custom Styled Radio Buttons](https://moderncss.dev/pure-css-custom-styled-radio-buttons)
