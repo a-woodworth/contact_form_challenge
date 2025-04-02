@@ -34,7 +34,8 @@
             <div class="form__name-group">
               <div class="form__input-wrapper">
                 <label class="form__label" for="firstname">
-                  <span>First Name</span><span>*</span>
+                  <span>First Name</span
+                  ><span aria-hidden="true">*</span>
                 </label>
                 <input
                   class="form__input"
@@ -50,13 +51,12 @@
                 <p
                   class="form__error-message hidden"
                   id="firstname-error"
-                >
-                  This field is required
-                </p>
+                ></p>
               </div>
               <div class="form__input-wrapper">
                 <label class="form__label" for="lastname">
-                  <span>Last Name</span><span>*</span>
+                  <span>Last Name</span
+                  ><span aria-hidden="true">*</span>
                 </label>
                 <input
                   class="form__input"
@@ -72,14 +72,13 @@
                 <p
                   class="form__error-message hidden"
                   id="lastname-error"
-                >
-                  This field is required
-                </p>
+                ></p>
               </div>
             </div>
             <div class="form__input-wrapper">
               <label class="form__label" for="email">
-                <span>Email Address</span><span>*</span>
+                <span>Email Address</span
+                ><span aria-hidden="true">*</span>
               </label>
               <input
                 class="form__input"
@@ -92,17 +91,19 @@
                 value=""
                 required
               />
-              <p class="form__error-message hidden" id="email-error">
-                Please enter a valid email address
-              </p>
+              <p
+                class="form__error-message hidden"
+                id="email-error"
+              ></p>
             </div>
             <div
               class="form__radio-group"
               role="group"
-              aria-labelledby="query"
+              aria-labelledby="query-type"
             >
-              <p id="query" class="form__label">
-                <span>Query Type</span><span>*</span>
+              <p id="query-type" class="form__label">
+                <span>Query Type</span
+                ><span aria-hidden="true">*</span>
               </p>
               <div class="radio-btn__input">
                 <label class="radio-btn__label" for="general">
@@ -110,6 +111,7 @@
                     type="radio"
                     id="general"
                     name="query"
+                    aria-describedby="query-error"
                     value="general"
                   />
                   <span>General Enquiry</span>
@@ -121,6 +123,7 @@
                     type="radio"
                     id="support"
                     name="query"
+                    aria-describedby="query-error"
                     value="support"
                   />
                   <span>Support Request</span>
@@ -128,14 +131,12 @@
               </div>
               <p
                 class="form__error-message hidden"
-                id="query-type-error"
-              >
-                Please select a query type
-              </p>
+                id="query-error"
+              ></p>
             </div>
             <div class="form__input-wrapper">
               <label class="form__label" for="message">
-                <span>Message</span><span>*</span>
+                <span>Message</span><span aria-hidden="true">*</span>
               </label>
               <textarea
                 class="form__input"
@@ -149,9 +150,7 @@
               <p
                 class="form__error-message hidden"
                 id="message-error"
-              >
-                This field is required
-              </p>
+              ></p>
             </div>
             <div class="form__checkbox-group">
               <div class="custom-checkbox">
@@ -161,6 +160,8 @@
                     type="checkbox"
                     id="consent"
                     name="consent"
+                    aria-describedby="consent-error"
+                    value="consent"
                     required
                   />
                   <svg
@@ -182,9 +183,7 @@
               <p
                 class="form__error-message hidden"
                 id="consent-error"
-              >
-                To submit this form, please consent to being contacted
-              </p>
+              ></p>
             </div>
             <button type="submit">Submit</button>
           </fieldset>
